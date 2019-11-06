@@ -26,11 +26,12 @@ const RestaurantList = ({restaurantList,getNexResto,location,totalRestaurants})=
     });
     return(
         <Fragment>
+            {location.title!=null&&
         <div className="result-count-con">
             <div className="result-count">
                 <b>{totalRestaurants}</b> restaurants are found near <b>{location.title}</b>
             </div>            
-        </div>
+        </div>}
         <div className="resto-list-con">
             
             <div className="resto-list-con-in">
