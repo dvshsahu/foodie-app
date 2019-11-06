@@ -1,32 +1,29 @@
 import React from 'react';
-import Axios from "axios";
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      cities:[]
-    }
-  }
-  componentDidMount(){
-    Axios.get("/api/locations?query=del&count=10").then(res=>{
-      this.setState({
-        cities:res.data.location_suggestions
-      })
-    })
-  }
-  render(){
+import Home from "./modules/home/components/Home";
+import RestaurantDetails from "./modules/details_resto/components/RestaurantDetails";
+
+const App=()=>{
     return (
-      <div>
-          {this.state.cities.map((val,i)=>{
-            return(
-              <p key={i}>{val.title}</p>
-            )
-          })}
-      </div>
+      <AppRouter />
     );
   }
-}
+
+
+/**
+ * component for routing
+ */
+const AppRouter=()=>(
+<Router>
+  <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/restaurant/:id" component={RestaurantDetails} />
+  </Switch>
+</Router>);
 
 export default App;
