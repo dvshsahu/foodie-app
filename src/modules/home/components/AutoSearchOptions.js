@@ -7,18 +7,18 @@ import {getRestaurantsByLocationId} from "../actions/HomeActions";
  * @param {object} param0 
  */
 const AutoSearchOptions =({locations,getRestoByLoc,setDropdownState})=>{
-    const selectlocation=(id)=>{
-        getRestoByLoc(id);
+    const selectlocation=(loc)=>{
+        getRestoByLoc(loc);
         setDropdownState(false);
     }
 
     return(
         <div className="drop-down-con">
             <ul>
-            {locations.map(({entity_id,title})=>{
+            {locations.map((val)=>{
                 return(
-                    <li key={entity_id}>
-                        <a onClick={()=>selectlocation(entity_id)}>{title}</a>
+                    <li key={val.entity_id}>
+                        <a onClick={()=>selectlocation(val)}>{val.title}</a>
                     </li>
                 )
             })}

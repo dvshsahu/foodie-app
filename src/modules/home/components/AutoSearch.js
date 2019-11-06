@@ -9,7 +9,7 @@ const AutoSearch =({getSearchedLoc})=>{
 
     let searchValue;
 
-    const changeHandler=(e)=>{
+    const changeHandler=()=>{
         setDropdownState(true);
         getSearchedLoc(searchValue.value);
     }
@@ -18,7 +18,7 @@ const AutoSearch =({getSearchedLoc})=>{
             <div className="autosearch-con-in">
             <input type="search" className="search-field" placeholder="Search location" ref={input=>searchValue=input} 
                 onFocus={()=>setDropdownState(true)} 
-                onChange={(e)=>changeHandler(e)} />
+                onChange={changeHandler} />
             {isOpen && (
                 <AutoSearchOptions setDropdownState={setDropdownState} />
             )}
