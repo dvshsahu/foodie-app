@@ -17,7 +17,7 @@ const App=()=>{
               <h1 className="app-title">Foodie</h1>
           </div>
         </header>
-        <main class="app-main">
+        <main className="app-main">
           <div className="app-main-in">
               <AppRouter />
           </div>        

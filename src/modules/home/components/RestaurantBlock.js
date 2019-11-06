@@ -14,7 +14,7 @@ const RestaurantBlock=({resto})=>{
                     <div className="name-con">
                         <span className="resto-title">{name}</span>
                         <span className="cuisines">{cuisines}</span>
-                        <span className="resto-avg-cost">Avg. cost {currency}{average_cost_for_two} for two</span>
+                        <span className="resto-avg-cost">Avg. {currency}{average_cost_for_two} for two</span>
                     </div>
                     <div className="review-con">
                         <span className="resto-rating" style={{background:`#${user_rating.rating_color}`}}>{user_rating.aggregate_rating}</span>
@@ -23,7 +23,7 @@ const RestaurantBlock=({resto})=>{
                     </div>
                 </div>
                 <div className="location-con">
-                    <a className="loc-a"><img src="loc.png" width="20px"/> {location.locality}, {location.city}</a>
+                    <span className="loc-a"><img src="loc.png" alt="location icon" width="20px"/> {location.locality}, {location.city}</span>
                 </div>
             </div>
         </Link>

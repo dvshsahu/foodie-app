@@ -9,6 +9,23 @@
     }
 }
 
+.result-count-con{
+    display: flex;
+    justify-content: center;
+
+    .result-count{
+        font-size: 1.2em;
+        margin: 10px 0px;
+        color: #5f5f5f;
+        flex: 1;
+        max-width: 900px;
+
+        b{
+            font-weight: 500;
+        }
+    }
+}
+
 
 .block-con{
     border:1px solid #ddd;

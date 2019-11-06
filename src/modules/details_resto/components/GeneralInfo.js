@@ -5,7 +5,7 @@ const GeneralInfo = ({selectedRestaurant})=>{
     return(
         <div>
             <p>{selectedRestaurant.name}</p>
-            <img src={selectedRestaurant.featured_image} />
+            <img src={selectedRestaurant.featured_image} alt="restaurant"/>
         </div>
     )
 }
