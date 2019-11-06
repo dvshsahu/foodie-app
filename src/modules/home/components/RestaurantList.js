@@ -4,9 +4,11 @@ import RestaurantBlock from "./RestaurantBlock";
 
 const RestaurantList = ({restaurantList})=>{
     return(
-        <ul>
-            {restaurantList.map(({restaurant})=><RestaurantBlock key={restaurant.id} resto={restaurant} />)}
-        </ul>
+        <div className="resto-list-con">
+            <div className="resto-list-con-in">
+                {restaurantList.map(({restaurant})=><RestaurantBlock key={restaurant.id} resto={restaurant} />)}
+            </div>
+        </div>
     )
 }
 

@@ -1,10 +1,14 @@
-$dark-color:#cb202d;
-$light-color:#fff6f7;
+$dark-color:#1e5288;
+$light-color:#f3f9ff;
 
 $header-height:50px;
-$max-width:1200px;
+$max-width:1100px;
 $main-height:calc(100vh - 50px);
 
+ul{
+    margin:0;
+    padding:0;
+}
 
 .app-header{
     background: $dark-color;
@@ -28,7 +32,7 @@ $main-height:calc(100vh - 50px);
     display: flex;
     justify-content: center;
     background: $light-color;
-    height: $main-height;
+    min-height: $main-height;
 
     .app-main-in{
         flex:1;
