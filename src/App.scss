@@ -1,0 +1,38 @@
+$dark-color:#cb202d;
+$light-color:#fff6f7;
+
+$header-height:50px;
+$max-width:1200px;
+$main-height:calc(100vh - 50px);
+
+
+.app-header{
+    background: $dark-color;
+    height:$header-height;
+    display: flex;
+    justify-content: center;
+
+    .app-header-in{
+        flex:1;
+        max-width: $max-width;
+    }
+    .app-title{
+        margin:0;
+        color: #fff;
+    }
+}
+
+
+
+.app-main{
+    display: flex;
+    justify-content: center;
+    background: $light-color;
+    height: $main-height;
+
+    .app-main-in{
+        flex:1;
+        max-width: $max-width;
+        background: #fff;
+    }
+}

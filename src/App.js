@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{Fragment} from 'react';
+import "./App.scss";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +11,19 @@ import RestaurantDetails from "./modules/details_resto/components/RestaurantDeta
 
 const App=()=>{
     return (
-      <AppRouter />
+      <Fragment>
+        <header className="app-header">
+          <div className="app-header-in">
+              <h1 className="app-title">Foodie</h1>
+          </div>
+        </header>
+        <main class="app-main">
+          <div className="app-main-in">
+              <AppRouter />
+          </div>        
+        </main>        
+      </Fragment>
+      
     );
   }
 

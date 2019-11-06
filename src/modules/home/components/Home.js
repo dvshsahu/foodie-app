@@ -1,10 +1,17 @@
-import React from "react";
+import React,{Fragment} from "react";
+import "../styles/Home.scss";
+
+import AutoSearch from "./AutoSearch";
+import RestaurantList from "./RestaurantList";
 
 const Home=()=>{
     return(
-        <div>
-            <p>Home</p>
-        </div>
+        <Fragment>
+            <div className="search-con">
+                <AutoSearch />
+            </div>
+            <RestaurantList />
+        </Fragment>
     )
 }
 
