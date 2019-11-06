@@ -3,12 +3,14 @@ import thunk from 'redux-thunk';
 
 //reducers
 import RestaurantReducer from "./reducers/RestaurantReducer";
+import LocationReducer from "./reducers/LocationReducer";
 
 /**
  * function to combine all reducers
  */
 const reducers = combineReducers({
-    restaurant : RestaurantReducer
+    restaurant : RestaurantReducer,
+    location : LocationReducer
 })
 
 /**
