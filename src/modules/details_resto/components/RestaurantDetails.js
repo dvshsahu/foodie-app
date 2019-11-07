@@ -1,7 +1,7 @@
-import React,{useEffect,Fragment} from "react";
+import React,{useEffect} from "react";
 import {useParams} from "react-router-dom";
 import { connect} from "react-redux";
-import GeneralInfo from "./GeneralInfo";
+import RestaurantInfo from "./RestaurantInfo";
 import "../styles/RestaurantDetails.scss";
 
 import {getRestaurantDetails} from "../actions/RestaurantDetailsActions";
@@ -12,9 +12,7 @@ const RestaurantDetails=({getRestaurantDetails})=>{
         getRestaurantDetails(id)
     })
     return(
-        <Fragment>
-            <GeneralInfo />
-        </Fragment>
+            <RestaurantInfo />
     )
 }
 

@@ -23,7 +23,7 @@ const OtherDetails =({selectedRestaurant})=>{
                     </div>
                     <div className="info-con">
                         <div className="label">
-                            Online delivery:
+                            Online delivery
                         </div>
                         <div className="data">
                             {has_online_delivery?"Available":"Not available"}
@@ -31,7 +31,7 @@ const OtherDetails =({selectedRestaurant})=>{
                     </div>
                     <div className="info-con">
                         <div className="label">
-                            Table booking:
+                            Table booking
                         </div>
                         <div className="data">
                             {has_table_booking?"Available":"Not available"}

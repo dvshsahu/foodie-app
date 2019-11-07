@@ -1,5 +1,5 @@
 .user-review-con{
-    padding: 20px;
+    padding: 0px 20px;
 
     .title{
         font-size: 1.3em;
@@ -42,7 +42,17 @@
             }
 
             .rating{
-                width:300px
+                width:150px;
+
+                .rating-text{
+                    font-size: 1.5em;
+                    margin-left: 5px;
+                    font-weight: 500;
+
+                    small{
+                        color:#7b7b7b;
+                    }
+                }
             }
         }
 

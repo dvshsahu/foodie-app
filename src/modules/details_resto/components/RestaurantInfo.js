@@ -4,7 +4,7 @@ import DetailsTile from "./DetailsTile";
 import OtherDetails from "./OtherDetails";
 import UserReview from "./UserReview";
 
-const GeneralInfo = ({selectedRestaurant})=>{
+const RestaurantInfo = ({selectedRestaurant})=>{
     return(
         <div className="resto-details-con">
             <div className="resto-prof-con" style={{backgroundImage:`url(${selectedRestaurant.featured_image})`}}></div>
@@ -19,4 +19,4 @@ const mapStateToProps = state=>({
     selectedRestaurant:state.restaurant.selectedRestaurant
 })
 
-export default connect(mapStateToProps)(GeneralInfo);
+export default connect(mapStateToProps)(RestaurantInfo);

@@ -26,11 +26,13 @@ const ReviewBlock = ({review})=>{
                     <div className="foodie-title" style={{background:`#${foodie_color}`}}>{foodie_level}</div>                                       
                 </div>
                 <div className="rating">
-                    {rating}
+                    <div className="rating-text">{rating}<small>/5</small></div>
                     <StarRatings
                         rating={rating}
-                        starRatedColor="blue"
+                        starRatedColor={rating_color}
                         numberOfStars={5}
+                        starDimension="25px"
+                        starSpacing="1px"
                         name='rating'
                         />
                 </div>
