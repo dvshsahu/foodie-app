@@ -6,9 +6,9 @@ const GeneralInfo = ({selectedRestaurant})=>{
     return(
         <div className="resto-details-con">
             <div className="resto-prof-con" style={{backgroundImage:`url(${selectedRestaurant.featured_image})`}}>
-                <DetailsTile resto={selectedRestaurant} />
+                
             </div>
-           
+            <DetailsTile resto={selectedRestaurant} />
         </div>
     )
 }
