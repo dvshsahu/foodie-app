@@ -47,3 +47,22 @@ export const getNextRestaurantsByLocationId =(locationId,offset)=> async (dispat
         console.log(e)
     }
 }
+
+/**
+ * function to get near by restaurants by geo location
+ * @param {number} lat 
+ * @param {number} lon 
+ */
+export const getRestaurantsByGeolocationCoordinates = (lat,lon)=>async(dispatch)=>{
+    try{
+        let {data} = await Axios.get(`/api/geocode?lat=${lat}&lon=${lon}`);
+        console.log(data);   
+        dispatch({type:GET_SELECTED_LOCATION_DETAILS,payload:data.location});
+
+        let restoList = await Axios.get(`/api/search?entity_id=${data.location.entity_id}&count=10`);  
+        dispatch({type:GET_RESTAURANT_LIST,payload:restoList.data.restaurants});  
+        dispatch({type:GET_TOTAL_RESTAURANT,payload:restoList.data.results_found});    
+    }catch(e) {
+        console.log(e)
+    }
+}
