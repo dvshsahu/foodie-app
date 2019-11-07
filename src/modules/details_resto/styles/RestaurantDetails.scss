@@ -13,25 +13,58 @@
 }
 .resto-tile-con{
     padding:15px;
+    display: flex;
 
-    .resto-title{
-        font-size: 1.9em;
-        color:$dark-color;
-        font-weight: 500;
+    .resto-name-con{
+        flex:1;
+
+        .resto-title{
+            font-size: 1.9em;
+            color:$dark-color;
+            font-weight: 500;
+        }
+        .resto-cuisine{
+            font-size: 1.1em;
+            margin-top:5px;
+            color: #525252;
+            font-weight: 500;
+        }
+        .resto-cost{
+            font-size: 0.9em;
+            margin-top:15px;
+        }
+        .resto-contact{
+            font-size: 1em;
+            margin-top:15px;
+        }
     }
-    .resto-cuisine{
-        font-size: 1.1em;
-        margin-top:5px;
-        color: #525252;
-        font-weight: 500;
+    .review-con{
+        width:200px;
+
+        .resto-rating{
+            padding: 10px 15px;
+            text-align: center;
+            width: 100px;
+            box-sizing: border-box;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 20px 0px;
+            font-size: 1.2em;
+        }
+
+        .rating-text{
+            font-size: .9em;
+            font-weight: 600;
+            margin-top:5px;
+            font-size: 1em;
+        }
+        .resto-votes{
+            font-size: 0.8em;
+            color: #757575;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
     }
-    .resto-cost{
-        font-size: 0.9em;
-        margin-top:15px;
-    }
-    .resto-contact{
-        font-size: 1em;
-        margin-top:15px;
-    }
+
 }
 

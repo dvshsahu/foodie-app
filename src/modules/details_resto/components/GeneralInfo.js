@@ -5,10 +5,8 @@ import DetailsTile from "./DetailsTile";
 const GeneralInfo = ({selectedRestaurant})=>{
     return(
         <div className="resto-details-con">
-            <div className="resto-prof-con" style={{backgroundImage:`url(${selectedRestaurant.featured_image})`}}>
-                
-            </div>
-            <DetailsTile resto={selectedRestaurant} />
+            <div className="resto-prof-con" style={{backgroundImage:`url(${selectedRestaurant.featured_image})`}}></div>
+            <DetailsTile selectedRestaurant={selectedRestaurant} />
         </div>
     )
 }
