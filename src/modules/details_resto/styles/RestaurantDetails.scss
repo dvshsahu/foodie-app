@@ -1,8 +1,6 @@
 
 @import "../../../utilities/Variables.scss";
 
-.resto-details-con{
-}
 
 .resto-prof-con{
     height: 320px;
@@ -68,3 +66,30 @@
 
 }
 
+.other-details-con{
+    padding: 10px;
+    .row{
+        display: flex;
+
+        .info-con{
+            flex:1;
+            padding: 10px;
+
+            .label{
+                font-size: 1.3em;
+                color:#353535;
+            }
+            .data{
+                font-size: 1.1em;
+                font-weight: 500;
+
+                .photo-con{
+                    width: 150px;
+                    height: 150px;
+                    margin-right:10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
