@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/RestaurantBlock.scss";
 import {Link} from "react-router-dom";
-
+/**
+ * component to display restaurant information in searched list
+ * @param {object} param0 
+ */
 const RestaurantBlock=({resto})=>{
     let {thumb,id,name,location,average_cost_for_two,currency,user_rating,cuisines} = resto;
     return(

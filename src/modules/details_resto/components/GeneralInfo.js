@@ -1,11 +1,14 @@
 import React from "react";
 import {connect} from "react-redux";
+import DetailsTile from "./DetailsTile";
 
 const GeneralInfo = ({selectedRestaurant})=>{
     return(
-        <div>
-            <p>{selectedRestaurant.name}</p>
-            <img src={selectedRestaurant.featured_image} alt="restaurant"/>
+        <div className="resto-details-con">
+            <div className="resto-prof-con" style={{backgroundImage:`url(${selectedRestaurant.featured_image})`}}>
+                <DetailsTile resto={selectedRestaurant} />
+            </div>
+           
         </div>
     )
 }

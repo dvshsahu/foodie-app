@@ -1,0 +1,48 @@
+
+@import "../../../utilities/Variables.scss";
+
+.resto-details-con{
+    display: flex;
+    justify-content: center;
+}
+
+.resto-prof-con{
+    height: 400px;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+
+    .resto-tile-con{
+        background: rgba(29, 27, 27, 0.62);
+        max-width: 500px;
+        flex:1;
+        padding: 10px;
+        height: 200px;
+    
+        .resto-title{
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #fff;
+        }
+        .resto-cuisine{
+            font-size: 1em;
+            color: #fff;
+            margin-top:5px;
+        }
+        .resto-cost{
+            font-size: 0.9em;
+            color: #fff;
+            margin-top:15px;
+        }
+        .resto-contact{
+            font-size: 1em;
+            color: #fff;
+            margin-top:15px;
+        }
+    }
+}
+
