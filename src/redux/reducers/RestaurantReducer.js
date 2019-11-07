@@ -7,7 +7,11 @@ import {
 let initialState={
     restaurantList:[],
     restaurantsFound:0,
-    selectedRestaurant:{}
+    selectedRestaurant:{
+        all_reviews:{
+            reviews:[]
+        }
+    }
 }
 
 /**
