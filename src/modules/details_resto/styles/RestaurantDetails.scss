@@ -12,30 +12,25 @@
     box-sizing: border-box;
 }
 .resto-tile-con{
-    background: rgba(29, 27, 27, 0.62);
-    max-width: 500px;
-    flex:1;
-    padding: 10px;
-    height: 200px;
+    padding:15px;
 
     .resto-title{
-        font-size: 1.5em;
+        font-size: 1.8em;
+        color:$dark-color;
         font-weight: 500;
-        color: #fff;
     }
     .resto-cuisine{
-        font-size: 1em;
-        color: #fff;
+        font-size: 1.1em;
         margin-top:5px;
+        color: #525252;
+        font-weight: 500;
     }
     .resto-cost{
         font-size: 0.9em;
-        color: #fff;
         margin-top:15px;
     }
     .resto-contact{
         font-size: 1em;
-        color: #fff;
         margin-top:15px;
     }
 }
