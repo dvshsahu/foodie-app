@@ -72,7 +72,6 @@ export const getRestaurantsByGeolocationCoordinates = (lat,lon)=>async(dispatch)
  * @param {number} id 
  */
 export const likeRestaurant = (id)=>(dispatch,getState)=>{
-    console.log(getState())
     let updateRestoList = getState().restaurant.restaurantList.map(val=>{
         if(val.restaurant.id===id){
             val.restaurant.isLiked=!val.restaurant.isLiked;

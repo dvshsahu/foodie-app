@@ -7,7 +7,9 @@ import UserReview from "./UserReview";
 const RestaurantInfo = ({selectedRestaurant})=>{
     return(
         <div className="resto-details-con">
-            <div className="resto-prof-con" style={{backgroundImage:`url(${selectedRestaurant.featured_image})`}}></div>
+            <div className="resto-prof-con" style={{backgroundImage:`url(${selectedRestaurant.featured_image})`}}>
+                <img src={selectedRestaurant.isLiked?"/like-fill.svg":"/like.svg"} width="40" height="40" />
+            </div>
             <DetailsTile selectedRestaurant={selectedRestaurant} />
             <OtherDetails selectedRestaurant={selectedRestaurant} />
             <UserReview />
