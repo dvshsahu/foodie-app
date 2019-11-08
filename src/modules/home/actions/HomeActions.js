@@ -4,8 +4,10 @@ import {
     APPEND_RESTAURANT_LIST,
     GET_LOCATION_LIST,
     GET_SELECTED_LOCATION_DETAILS,
-    GET_TOTAL_RESTAURANT
+    GET_TOTAL_RESTAURANT,
+    SET_LOADING_RESTAURENT_FETCHING
 } from "../../../redux/ActionTypes";
+
 /**
  * function to get list of searched location
  * @param {string} query 
@@ -25,10 +27,13 @@ export const getSearchedLocations =(query)=> async (dispatch)=>{
  */
 export const getRestaurantsByLocationId =(loc)=> async (dispatch)=>{
     dispatch({type:GET_SELECTED_LOCATION_DETAILS,payload:loc});
+    dispatch({type:SET_LOADING_RESTAURENT_FETCHING,payload:true});
+    dispatch({type:GET_RESTAURANT_LIST,payload:[]});
     try{
         let {data} = await Axios.get(`/api/search?entity_id=${loc.entity_id}&count=10`);
         dispatch({type:GET_RESTAURANT_LIST,payload:data.restaurants});  
-        dispatch({type:GET_TOTAL_RESTAURANT,payload:data.results_found});       
+        dispatch({type:GET_TOTAL_RESTAURANT,payload:data.results_found});
+        dispatch({type:SET_LOADING_RESTAURENT_FETCHING,payload:false});       
     }catch(e) {
         console.log(e)
     }
@@ -40,9 +45,11 @@ export const getRestaurantsByLocationId =(loc)=> async (dispatch)=>{
  * @param {number} offset
  */
 export const getNextRestaurantsByLocationId =(locationId,offset)=> async (dispatch)=>{
+    dispatch({type:SET_LOADING_RESTAURENT_FETCHING,payload:true});
     try{
         let {data} = await Axios.get(`/api/search?entity_id=${locationId}&count=10&start=${offset}`);
-        dispatch({type:APPEND_RESTAURANT_LIST,payload:data.restaurants});        
+        dispatch({type:APPEND_RESTAURANT_LIST,payload:data.restaurants}); 
+        dispatch({type:SET_LOADING_RESTAURENT_FETCHING,payload:false});       
     }catch(e) {
         console.log(e)
     }
@@ -54,14 +61,16 @@ export const getNextRestaurantsByLocationId =(locationId,offset)=> async (dispat
  * @param {number} lon 
  */
 export const getRestaurantsByGeolocationCoordinates = (lat,lon)=>async(dispatch)=>{
+    dispatch({type:SET_LOADING_RESTAURENT_FETCHING,payload:true});
+    dispatch({type:GET_RESTAURANT_LIST,payload:[]});
     try{
         let {data} = await Axios.get(`/api/geocode?lat=${lat}&lon=${lon}`);
-        console.log(data);   
         dispatch({type:GET_SELECTED_LOCATION_DETAILS,payload:data.location});
 
         let restoList = await Axios.get(`/api/search?entity_id=${data.location.entity_id}&count=10`);  
         dispatch({type:GET_RESTAURANT_LIST,payload:restoList.data.restaurants});  
-        dispatch({type:GET_TOTAL_RESTAURANT,payload:restoList.data.results_found});    
+        dispatch({type:GET_TOTAL_RESTAURANT,payload:restoList.data.results_found});  
+        dispatch({type:SET_LOADING_RESTAURENT_FETCHING,payload:false});  
     }catch(e) {
         console.log(e)
     }
