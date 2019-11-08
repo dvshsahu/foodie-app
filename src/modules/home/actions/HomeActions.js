@@ -1,4 +1,4 @@
-import Axios from "axios";
+import Axios from "../../../utilities/AxiosConfig";
 import {
     GET_RESTAURANT_LIST,
     APPEND_RESTAURANT_LIST,

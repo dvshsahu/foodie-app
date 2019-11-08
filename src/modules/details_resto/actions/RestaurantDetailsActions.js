@@ -1,4 +1,4 @@
-import Axios from "axios";
+import Axios from "../../../utilities/AxiosConfig";
 import {
     GET_SELECTED_RESTAURANT_DETAILS
 } from "../../../redux/ActionTypes";
