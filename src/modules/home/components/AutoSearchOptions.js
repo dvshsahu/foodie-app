@@ -17,6 +17,7 @@ const AutoSearchOptions =({locations,getRestoByLoc,setDropdownState,getRestoByGe
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition((position)=>{
             getRestoByGeoLoc(position.coords.latitude,position.coords.longitude);
+            setDropdownState(false);
           });
         } else {
           alert("Geolocation is not supported by this browser.");
@@ -34,7 +35,7 @@ const AutoSearchOptions =({locations,getRestoByLoc,setDropdownState,getRestoByGe
                 )
             })}
             </ul>
-            <p onClick={getLocation}>Use my current location</p>
+            <button onClick={getLocation} className="curr-loc">Use my current location</button>
         </div>
     )
 }

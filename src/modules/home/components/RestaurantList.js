@@ -1,9 +1,9 @@
 import React,{useEffect,Fragment} from "react";
 import {connect} from "react-redux";
 import RestaurantBlock from "./RestaurantBlock";
-import {getNextRestaurantsByLocationId} from "../actions/HomeActions";
+import {getNextRestaurantsByLocationId,likeRestaurant} from "../actions/HomeActions";
 
-const RestaurantList = ({restaurantList,getNexResto,location,totalRestaurants})=>{
+const RestaurantList = ({restaurantList,getNexResto,location,totalRestaurants,likeRestaurant})=>{
     let offset=10;
 
     const isBottom=(el)=> {
@@ -35,7 +35,7 @@ const RestaurantList = ({restaurantList,getNexResto,location,totalRestaurants})=
                 <div className="resto-list-con">
                     
                     <div className="resto-list-con-in">
-                        {restaurantList.map(({restaurant})=><RestaurantBlock key={restaurant.id} resto={restaurant} />)}
+                        {restaurantList.map(({restaurant})=><RestaurantBlock likeRestaurant={likeRestaurant} key={restaurant.id} resto={restaurant} />)}
                     </div>
                     <div id="scroll_bottom"></div>
                 </div>
@@ -49,6 +49,6 @@ const mapStateToProps= state=>({
     totalRestaurants:state.restaurant.restaurantsFound
 });
 
-const mapDispatchToProps = {getNexResto:getNextRestaurantsByLocationId}
+const mapDispatchToProps = {getNexResto:getNextRestaurantsByLocationId,likeRestaurant}
 
 export default connect(mapStateToProps,mapDispatchToProps)(RestaurantList);

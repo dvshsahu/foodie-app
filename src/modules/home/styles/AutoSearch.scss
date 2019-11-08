@@ -8,6 +8,17 @@
         max-width:500px;
         flex:1;
         position: relative;
+
+        .curr-loc{
+            border: 1px solid #ddd;
+            background: #fff;
+            color: #1e5288;
+            font-weight: 500;
+            padding: 5px;
+             margin-top: 5px;
+            cursor: pointer;
+            display: block;
+        }
     }
 }
 

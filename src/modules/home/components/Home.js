@@ -8,7 +8,7 @@ const Home=()=>{
     return(
         <Fragment>
             <div className="search-con">
-                <AutoSearch />
+                <AutoSearch />                
             </div>
             <RestaurantList />
         </Fragment>

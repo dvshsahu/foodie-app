@@ -14,7 +14,7 @@ const App=()=>{
       <Fragment>
         <header className="app-header">
           <div className="app-header-in">
-              <h1 className="app-title">Foodie</h1>
+              <a href="/"className="app-title">Foodie</a>
           </div>
         </header>
         <main className="app-main">
