@@ -31,7 +31,7 @@ const ReviewBlock = ({review})=>{
                         rating={rating}
                         starRatedColor={rating_color}
                         numberOfStars={5}
-                        starDimension="25px"
+                        starDimension="20px"
                         starSpacing="1px"
                         name='rating'
                         />
