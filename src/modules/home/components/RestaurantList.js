@@ -38,7 +38,7 @@ const RestaurantList = ({restaurantList,getNexResto,location,totalRestaurants,li
                 <div className="resto-list-con">
                     
                     <div className="resto-list-con-in">
-                        {restaurantList.map(({restaurant})=><RestaurantBlock likeRestaurant={likeRestaurant} key={restaurant.id} resto={restaurant} />)}
+                        {restaurantList.map(({restaurant},i)=><RestaurantBlock likeRestaurant={likeRestaurant} key={`${restaurant.id}${i}`} resto={restaurant} />)}
                         {isLoading&&<Loading />}
                     </div>
                     <div id="scroll_bottom"></div>
