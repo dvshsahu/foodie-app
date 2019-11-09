@@ -4,8 +4,10 @@ import RestaurantBlock from "./RestaurantBlock";
 import Loading from "./Loading";
 import {getNextRestaurantsByLocationId,likeRestaurant} from "../actions/HomeActions";
 
+let offset=10;
+
 const RestaurantList = ({restaurantList,getNexResto,location,totalRestaurants,likeRestaurant,isLoading})=>{
-    let offset=10;
+  
 
     const isBottom=(el)=> {
         return el.getBoundingClientRect().bottom <= window.innerHeight;
