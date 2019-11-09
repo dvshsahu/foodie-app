@@ -3,6 +3,9 @@
 .autosearch-con{
     display: flex;
     justify-content: center;
+    @include tab{
+        padding:0px 5px;
+    }
 
     .autosearch-con-in{
         max-width:500px;
